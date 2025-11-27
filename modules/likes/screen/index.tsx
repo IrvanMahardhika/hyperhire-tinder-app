@@ -21,6 +21,10 @@ export const Likes = () => {
 					return null;
 				}}>
 				{(item: IUser, swipe: any, isFirst: boolean) => {
+          if (!item) {
+            return null;
+          }
+          
 					return (
 						<Card coverSrc={item.coverSrc}>
 							<View style={styles.informationContainer}>

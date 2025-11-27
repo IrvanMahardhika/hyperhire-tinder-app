@@ -79,6 +79,10 @@ export const Home = () => {
 					);
 				}}>
 				{(item: IUser, swipe: any, isFirst: boolean) => {
+          if (!item) {
+            return null;
+          }
+
 					return (
 						<Card coverSrc={item.coverSrc}>
 							{isFirst && renderChoice(swipe)}
